@@ -1,5 +1,3 @@
-const browser = chrome || browser
-
 const tabQuery = (options, params = {}) => new Promise(res => {
 	if (!options.countPinnedTabs) params.pinned = false // only non-pinned tabs
 	browser.tabs.query(params, tabs => res(tabs))
