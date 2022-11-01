@@ -103,16 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	for (let i = 0; i < onKeyupInputs.length; i++) {
 		onKeyupInputs[i].addEventListener('keyup', saveOptions);
 	}
-
-
-	// show special message
-
-	if (!localStorage.getItem('readMessage') && (new Date() < new Date('09-20-2020'))) {
-		document.querySelector('.message').classList.remove('hidden')
-		setTimeout(() => {
-			localStorage.setItem('readMessage', true)
-		}, 2000);
-	}
 });
 
 
